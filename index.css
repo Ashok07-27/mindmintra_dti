@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #24324a;
+  background: #f8fbff;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: radial-gradient(circle at top left, rgba(96, 165, 250, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(124, 108, 242, 0.15), transparent 26%),
+    linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.glass-card {
+  @apply rounded-3xl border border-white/70 bg-white/75 backdrop-blur-xl shadow-soft;
+}
+
+.soft-input {
+  @apply w-full rounded-2xl border border-sky-100 bg-white/80 px-4 py-3 text-sm text-ink outline-none transition focus:border-bloom focus:ring-2 focus:ring-bloom/20;
+}
+
+.primary-btn {
+  @apply rounded-2xl bg-gradient-to-r from-calm to-bloom px-5 py-3 font-semibold text-white transition hover:scale-[1.01] hover:shadow-lg;
+}
+
+.secondary-btn {
+  @apply rounded-2xl border border-sky-200 bg-white/80 px-5 py-3 font-semibold text-ink transition hover:bg-sky-50;
+}
+
+
+
