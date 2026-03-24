@@ -3,7 +3,9 @@ import axios from "axios";
 const isLiveServerOrigin =
   typeof window !== "undefined" &&
   (window.location.origin === "http://127.0.0.1:5500" ||
-    window.location.origin === "http://localhost:5500");
+    window.location.origin === "http://localhost:5500" ||
+    window.location.origin.includes("github.io") ||
+    window.location.protocol === "file:");
 
 const apiBaseURL = isLiveServerOrigin
   ? "http://127.0.0.1:5000/api"

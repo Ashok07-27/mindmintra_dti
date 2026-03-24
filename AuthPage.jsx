@@ -29,22 +29,7 @@ export default function AuthPage() {
     setError("");
     setNotice("");
 
-    const allowedOrigins = [
-      "http://127.0.0.1:5000",
-      "http://localhost:5000",
-      "http://127.0.0.1:5500",
-      "http://localhost:5500",
-    ];
-    const isWrongAppOrigin =
-      window.location.protocol === "file:" ||
-      (import.meta.env.PROD && !allowedOrigins.includes(window.location.origin));
-
-    if (isWrongAppOrigin) {
-      setError(
-        `Open the app from Live Server at http://127.0.0.1:5500 or from the Node app at http://127.0.0.1:5000 instead of ${window.location.origin || "this file"}.`
-      );
-      return;
-    }
+    // Origin check removed to allow GitHub pages
 
     try {
       const payload = {
